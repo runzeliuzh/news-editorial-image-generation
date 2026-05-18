@@ -1,0 +1,34 @@
+# Minimal runtime/training requirements for the MediaEval NewsImages workflow.
+# For model checkpoints, please see README for the required Hugging Face model IDs.
+# If CUDA wheel installation fails, install a compatible PyTorch build first, then re-run:
+#   pip install -r requirements.txt
+
+# Core deep learning / CUDA stack from the tested environment
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+xformers==0.0.35
+bitsandbytes==0.49.2
+
+# Hugging Face model loading, training, LoRA, and diffusion generation
+transformers==5.8.1
+diffusers==0.38.0
+accelerate==1.13.0
+peft==0.19.1
+datasets==4.8.5
+safetensors==0.8.0rc0
+tokenizers==0.22.2
+huggingface-hub==1.13.0
+sentencepiece==0.2.1
+qwen-vl-utils==0.0.14
+
+# Data, image, and utility packages used by the scripts
+numpy==2.4.3
+scipy==1.17.1
+pandas==3.0.2
+pillow==12.2.0
+tqdm==4.67.3
+pyarrow==23.0.1
+PyYAML==6.0.3
+requests==2.33.1
+einops==0.8.2
+protobuf==7.34.1
